@@ -1,15 +1,19 @@
 {
   "name": "server-with-vue-ssr",
-  "version": "1.0.50",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "server": "bun run --watch src/server/index.ts",
+    "dev": "bun run --watch src/server/index.ts",
+    "build": "bun build src/server/index.ts --outfile dist/server.js",
+    "preview": "NODE_ENV=production node dist/server.js"
   },
   "dependencies": {
-    "elysia": "latest"
+    "elysia": "latest",
+    "vue": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
-  },
-  "module": "src/index.js"
+    "bun-types": "latest",
+    "typescript": "latest"
+  }
 }
