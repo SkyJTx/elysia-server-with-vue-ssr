@@ -1,5 +1,5 @@
 {
-  "name": "server-with-vue-ssr",
+  "name": "elysia-server-with-vue-ssr",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
