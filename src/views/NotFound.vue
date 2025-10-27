@@ -11,8 +11,6 @@ defineProps<Props>()
     <header>
       <nav class="nav">
         <a href="/">🏠 Home</a>
-        <a href="/about">ℹ️ About</a>
-        <a href="/users">👥 Users</a>
       </nav>
     </header>
     <main class="container">

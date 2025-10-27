@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue SSR with Elysia</title>
+    <link rel="stylesheet" href="/assets/main-{{CSS_HASH}}.css" />
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { 
@@ -18,9 +19,17 @@
     <script id="initial-state" type="application/json">
       {{INITIAL_STATE}}
     </script>
+    <script id="component-name" type="application/json">
+      "{{COMPONENT_NAME}}"
+    </script>
     <script>
       window.__INITIAL_STATE__ = JSON.parse(document.getElementById('initial-state').textContent);
+      window.__COMPONENT_NAME__ = JSON.parse(document.getElementById('component-name').textContent);
       window.__SSR_RENDERED__ = true;
+      document.getElementById('initial-state').remove();
+      document.getElementById('component-name').remove();
     </script>
+    {{DEV_SCRIPTS}}
+    <script type="module" src="/app.js"></script>
   </body>
 </html>

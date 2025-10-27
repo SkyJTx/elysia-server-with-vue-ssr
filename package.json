@@ -2,12 +2,14 @@
   "name": "server-with-vue-ssr",
   "version": "1.0.50",
   "scripts": {
-    "dev": "bun run --watch src/server/index.ts",
-    "build": "bun build src/server/index.ts --outfile build/server.js --target=bun",
-    "preview": "bun build/server.js"
+    "build:client": "vite build --outDir dist/public",
+    "dev": "NODE_ENV=development bun run --watch src",
+    "build": "bun run build:client && bun build src/index.ts --outfile build/server.js --target=bun",
+    "preview": "NODE_ENV=production bun build/server.js"
   },
   "dependencies": {
     "elysia": "latest",
+    "vite-tsconfig-paths": "^5.1.4",
     "vue": "latest"
   },
   "devDependencies": {

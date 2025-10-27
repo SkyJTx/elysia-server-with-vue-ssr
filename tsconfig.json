@@ -39,8 +39,26 @@
       "@/api/*": [
         "src/api/*"
       ],
-      "@/server/*": [
-        "src/server/*"
+      "@/lib/*": [
+        "src/lib/*"
+      ],
+      "@/client/*": [
+        "src/client/*"
+      ],
+      "@/views": [
+        "src/views"
+      ],
+      "@/api": [
+        "src/api"
+      ],
+      "@/server": [
+        "src/server"
+      ],
+      "@/lib": [
+        "src/lib"
+      ],
+      "@/client": [
+        "src/client"
       ]
     },
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */

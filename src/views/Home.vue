@@ -10,9 +10,6 @@ defineProps<{
     <header>
       <nav>
         <a href="/">🏠 Home</a>
-        <a href="/about">ℹ️ About</a>
-        <a href="/users">👥 Users</a>
-        <a href="/api/hello">📡 API Test</a>
       </nav>
     </header>
 
